@@ -190,9 +190,15 @@ const filteredRealEstateList = computed(() => {
   line-height: 20px;
   color: $color-black;
 
+  @media #{$media} and (min-width: $mobile-min) and (max-width: $mobile-max) {
+    padding: 15px 0;
+  }
+
   &__title {
     font-size: 15px;
     font-weight: 700;
+    margin: 0 0 10px 0;
+    text-align: right;
   }
 }
 
@@ -201,9 +207,10 @@ const filteredRealEstateList = computed(() => {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 30px;
   row-gap: 23px;
-}
 
-.content__item {
-  width: 50%;
+  @media #{$media} and (min-width: $mobile-min) and (max-width: $mobile-max) {
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 0;
+  }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <label>
+  <label class="checkbox-wrp">
     <input
       type="checkbox"
       v-model="model"
@@ -31,3 +31,12 @@ const updateCheckAll = () => {
   emit("updateCheckall");
 };
 </script>
+
+<style lang="scss" scoped>
+@import "@/assets/variables.scss";
+
+.checkbox-wrp {
+  display: flex;
+  gap: 5px;
+}
+</style>

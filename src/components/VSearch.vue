@@ -49,12 +49,20 @@ defineProps({
     width: 100%;
     padding: 10px 0;
     text-indent: 100px;
+
+    @media #{$media} and (min-width: $mobile-min) and (max-width: $mobile-max) {
+      text-indent: 30px;
+    }
   }
 
   &__icon {
     position: absolute;
     top: 11px;
     left: 30px;
+
+    @media #{$media} and (min-width: $mobile-min) and (max-width: $mobile-max) {
+      left: 10px;
+    }
   }
 }
 

@@ -34,7 +34,7 @@
               <span>{{ value.floor }}</span>
             </div>
           </div>
-          <div>
+          <div class="card__img-wrp">
             <img class="card__img" :src="value.picture" alt="photo" />
           </div>
         </div>
@@ -102,6 +102,11 @@ const updateCheckAll = () => {
 .card-wrp {
   width: 50%;
   display: flex;
+
+  @media #{$media} and (min-width: $mobile-min) and (max-width: $mobile-max) {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .tooltip {
@@ -146,6 +151,14 @@ const updateCheckAll = () => {
   background: $color-background-card;
   padding: 21px 35px 25px 35px;
 
+  @media #{$media} and (min-width: $tablet-min) and (max-width: $tablet-max) {
+    padding: 25px;
+  }
+
+  @media #{$media} and (min-width: $mobile-min) and (max-width: $mobile-max) {
+    padding: 15px;
+  }
+
   &__header,
   &__details,
   &__footer {
@@ -156,6 +169,16 @@ const updateCheckAll = () => {
 
   &__footer {
     align-items: end;
+
+    @media #{$media} and (min-width: $mobile-min) and (max-width: $mobile-max) {
+      flex-direction: column;
+    }
+  }
+
+  &__details {
+    @media #{$media} and (min-width: $mobile-min) and (max-width: $mobile-max) {
+      flex-direction: column;
+    }
   }
 
   &__details-item {
@@ -194,6 +217,10 @@ const updateCheckAll = () => {
     display: flex;
     align-items: center;
     gap: 12px;
+
+    @media #{$media} and (min-width: $mobile-min) and (max-width: $mobile-max) {
+      display: none;
+    }
   }
 
   &__status {
@@ -206,6 +233,14 @@ const updateCheckAll = () => {
     padding: 6px 9px;
     display: flex;
     align-items: center;
+
+    @media #{$media} and (min-width: $tablet-min) and (max-width: $tablet-max) {
+      margin-right: -25px;
+    }
+
+    @media #{$media} and (min-width: $mobile-min) and (max-width: $mobile-max) {
+      margin-right: -15px;
+    }
 
     &_legal {
       background: $color-status-bg-legal;
@@ -257,6 +292,10 @@ const updateCheckAll = () => {
 
   &__title {
     width: 50%;
+
+    @media #{$media} and (min-width: $mobile-min) and (max-width: $mobile-max) {
+      width: 100%;
+    }
   }
 
   &__text {
@@ -268,12 +307,22 @@ const updateCheckAll = () => {
     color: $color-black;
   }
 
+  &__img-wrp {
+    @media #{$media} and (min-width: $mobile-min) and (max-width: $mobile-max) {
+      margin: 20px;
+    }
+  }
+
   &__img {
     max-width: 100%;
   }
 
   &__footer-item {
     width: 50%;
+
+    @media #{$media} and (min-width: $mobile-min) and (max-width: $mobile-max) {
+      width: 100%;
+    }
   }
 
   &__footer-icon {
@@ -307,6 +356,14 @@ const updateCheckAll = () => {
   display: block;
   position: relative;
   padding-left: 57px;
+
+  @media #{$media} and (min-width: $tablet-min) and (max-width: $tablet-max) {
+    padding-left: 45px;
+  }
+
+  @media #{$media} and (min-width: $mobile-min) and (max-width: $mobile-max) {
+    padding-left: 35px;
+  }
 }
 
 .checkbox__input {
